@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_carousals",
+  "info": {
+    "displayName": "carousal"
+  },
+  "options": {},
+  "attributes": {
+    "items": {
+      "type": "component",
+      "component": "shared.carousal-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

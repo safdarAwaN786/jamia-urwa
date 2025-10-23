@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_important_links",
+  "info": {
+    "displayName": "important_links"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "component",
+      "component": "shared.link-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

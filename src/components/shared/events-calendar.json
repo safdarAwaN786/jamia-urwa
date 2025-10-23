@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_events_calendars",
+  "info": {
+    "displayName": "events_calendar"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "show_upcoming": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

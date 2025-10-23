@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_programs_lists",
+  "info": {
+    "displayName": "programs_list"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

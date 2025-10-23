@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_news_lists",
+  "info": {
+    "displayName": "news_list"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "limit": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

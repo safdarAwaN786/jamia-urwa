@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_statistics_blocks",
+  "info": {
+    "displayName": "statistics_block"
+  },
+  "options": {},
+  "attributes": {
+    "stats": {
+      "type": "component",
+      "component": "shared.statistics-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
