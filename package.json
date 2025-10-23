@@ -1,5 +1,5 @@
 {
-  "name": "backend-strapi",
+  "name": "jamia-urwa",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -16,9 +16,9 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.28.0",
-    "@strapi/plugin-users-permissions": "5.28.0",
-    "@strapi/strapi": "5.28.0",
+    "@strapi/plugin-cloud": "5.29.0",
+    "@strapi/plugin-users-permissions": "5.29.0",
+    "@strapi/strapi": "5.29.0",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
     "pg": "8.8.0",
@@ -38,7 +38,7 @@
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "fe28fe2a-2c64-4713-8901-9077b0c2d774",
-    "installId": "30e80f6f47d47348b956e1c154b25963332ee01dd695c42ebcbde11a361597a5"
+    "uuid": "22ab77f3-f3f4-4c5a-8c0c-24d8fc0c10d1",
+    "installId": "cb6c0a91c6cd3fcf688abd272e32874a4e90339a779b64142f77c7d3f368e046"
   }
 }
