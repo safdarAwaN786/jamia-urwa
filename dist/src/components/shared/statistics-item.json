@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_shared_statistics_items",
+    "info": {
+        "displayName": "statistics_item"
+    },
+    "options": {},
+    "attributes": {
+        "label": {
+            "type": "string"
+        },
+        "value": {
+            "type": "integer"
+        }
+    },
+    "config": {}
+}

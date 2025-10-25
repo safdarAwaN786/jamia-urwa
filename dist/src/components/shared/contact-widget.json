@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_shared_contact_widgets",
+    "info": {
+        "displayName": "contact_widget"
+    },
+    "options": {},
+    "attributes": {
+        "phone": {
+            "type": "string"
+        },
+        "email": {
+            "type": "email"
+        },
+        "address": {
+            "type": "richtext"
+        }
+    },
+    "config": {}
+}

@@ -1,0 +1,29 @@
+{
+    "collectionName": "components_shared_carousal_items",
+    "info": {
+        "displayName": "carousal_item"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "caption": {
+            "type": "string"
+        },
+        "media": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images",
+                "files",
+                "videos",
+                "audios"
+            ]
+        },
+        "link": {
+            "type": "string"
+        }
+    },
+    "config": {}
+}

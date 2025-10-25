@@ -1,0 +1,42 @@
+{
+    "kind": "collectionType",
+    "collectionName": "form_submissions",
+    "info": {
+        "singularName": "form-submission",
+        "pluralName": "form-submissions",
+        "displayName": "form-submission"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "form": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::form.form",
+            "inversedBy": "submissions"
+        },
+        "data": {
+            "type": "json",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "submittedAt": {
+            "type": "date",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            },
+            "required": false
+        }
+    }
+}

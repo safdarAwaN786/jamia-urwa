@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_shared_announcement_items",
+    "info": {
+        "displayName": "announcement_item"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "date": {
+            "type": "date"
+        },
+        "body": {
+            "type": "richtext"
+        }
+    },
+    "config": {}
+}

@@ -1,0 +1,18 @@
+{
+    "collectionName": "components_shared_announcement_lists",
+    "info": {
+        "displayName": "announcement_list"
+    },
+    "options": {},
+    "attributes": {
+        "items": {
+            "type": "component",
+            "component": "shared.announcement-item",
+            "repeatable": true
+        },
+        "limit": {
+            "type": "integer"
+        }
+    },
+    "config": {}
+}
