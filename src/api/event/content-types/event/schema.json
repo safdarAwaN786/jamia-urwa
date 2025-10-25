@@ -27,21 +27,8 @@
     "location": {
       "type": "string"
     },
-    "excerpt": {
-      "type": "richtext"
-    },
-    "content": {
-      "type": "richtext"
-    },
-    "featured_media": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "is_public": {
+      "type": "boolean"
     }
   }
 }
