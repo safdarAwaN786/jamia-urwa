@@ -1,0 +1,28 @@
+{
+  "name": "@msafdarawan/strapi-plugin-form-builder",
+  "version": "1.0.1",
+  "description": "A reusable Form Builder plugin for Strapi v5 that allows admins to create dynamic forms, manage form fields, and collect submissions.",
+  "strapi": {
+    "name": "form-builder",
+    "displayName": "Form Builder",
+    "description": "Reusable form builder plugin with dynamic field support and submission tracking.",
+    "kind": "plugin"
+  },
+  "main": "server/index.js",
+  "license": "MIT",
+  "author": "Safdar Awan",
+  "engines": {
+    "node": ">=18.x",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "strapi",
+    "plugin",
+    "form-builder",
+    "dynamic-forms",
+    "strapi-plugin"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

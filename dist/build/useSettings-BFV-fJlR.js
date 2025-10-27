@@ -1,0 +1,1 @@
+import{k as a,Z as n}from"./strapi-C7VDpOiU.js";function r(t=!0){const{get:e}=a();return n({queryKey:["upload","settings"],enabled:t,async queryFn(){const{data:{data:s}}=await e("/upload/settings");return s}})}export{r as u};
