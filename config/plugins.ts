@@ -1,7 +1,6 @@
-// config/plugins.ts
-export default {
+export default ({ env }) => ({
   'form-builder': {
     enabled: true,
-    resolve: './node_modules/@msafdarawan/strapi-plugin-form-builder'
+    resolve: './src/plugins/form-builder',
   },
-};
+});

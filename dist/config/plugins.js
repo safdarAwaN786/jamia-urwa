@@ -1,9 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// config/plugins.ts
-exports.default = {
+exports.default = ({ env }) => ({
     'form-builder': {
         enabled: true,
-        resolve: './node_modules/@msafdarawan/strapi-plugin-form-builder'
+        resolve: './src/plugins/form-builder',
     },
-};
+});
