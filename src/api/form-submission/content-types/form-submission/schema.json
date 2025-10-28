@@ -16,7 +16,15 @@
       "target": "api::form.form",
       "inversedBy": "submissions"
     },
-    "data": { "type": "json", "required": true },
-    "submittedAt": { "type": "datetime", "default": { "currentTimestamp": true } }
+    "data": {
+      "type": "json",
+      "required": true
+    },
+    "submittedAt": {
+      "type": "datetime",
+      "default": {
+        "currentTimestamp": true
+      }
+    }
   }
 }
