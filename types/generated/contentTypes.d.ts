@@ -593,6 +593,113 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFormFieldFormField extends Struct.CollectionTypeSchema {
+  collectionName: 'form_fields';
+  info: {
+    displayName: 'Form Field';
+    pluralName: 'form-fields';
+    singularName: 'form-field';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    form: Schema.Attribute.Relation<'manyToOne', 'api::form.form'>;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::form-field.form-field'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    options: Schema.Attribute.JSON;
+    placeholder: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    required: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    type: Schema.Attribute.Enumeration<
+      ['text', 'email', 'number', 'select', 'file', 'date']
+    > &
+      Schema.Attribute.DefaultTo<'text'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFormSubmissionFormSubmission
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'form_submissions';
+  info: {
+    displayName: 'Form Submission';
+    pluralName: 'form-submissions';
+    singularName: 'form-submission';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    data: Schema.Attribute.JSON & Schema.Attribute.Required;
+    form: Schema.Attribute.Relation<'manyToOne', 'api::form.form'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::form-submission.form-submission'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    submittedAt: Schema.Attribute.DateTime &
+      Schema.Attribute.DefaultTo<{
+        currentTimestamp: true;
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFormForm extends Struct.CollectionTypeSchema {
+  collectionName: 'forms';
+  info: {
+    description: 'Reusable form definition';
+    displayName: 'Form';
+    pluralName: 'forms';
+    singularName: 'form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.RichText;
+    fields: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::form-field.form-field'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::form.form'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
+    submissions: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::form-submission.form-submission'
+    >;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1332,6 +1439,9 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::event.event': ApiEventEvent;
+      'api::form-field.form-field': ApiFormFieldFormField;
+      'api::form-submission.form-submission': ApiFormSubmissionFormSubmission;
+      'api::form.form': ApiFormForm;
       'api::global.global': ApiGlobalGlobal;
       'api::my-test.my-test': ApiMyTestMyTest;
       'api::new.new': ApiNewNew;

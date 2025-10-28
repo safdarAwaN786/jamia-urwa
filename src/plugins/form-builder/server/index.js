@@ -82,10 +82,15 @@ export default {
 
         // Marker file to avoid re-running creation logic repeatedly
         const markerPath = join(strapi.dirs.app.root, ".form-builder-installed");
-        if (fs.existsSync(markerPath)) {
+        const allExist = ["form", "form-field", "form-submission"].every(name =>
+            fs.existsSync(join(strapi.dirs.app.src, "api", name))
+        );
+
+        if (fs.existsSync(markerPath) && allExist) {
             strapi.log.info("🟢 Form Builder content types already set up. Skipping initialization.");
             return;
         }
+
 
         // Define your content type schemas
         const schemas = [
